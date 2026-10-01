@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Facility Tracker</title>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -13,116 +15,210 @@
 body {
     margin: 0;
     min-height: 100vh;
+
     background: #070b10;
+
     color: #d8e0e8;
+
     font-family: Arial, Helvetica, sans-serif;
+
     padding: 20px;
 }
 
+
+/* =========================================
+   MAIN WINDOW
+========================================= */
+
 .app {
+
     width: 100%;
     max-width: 1200px;
+
     min-height: calc(100vh - 40px);
+
     margin: auto;
+
     background: #101922;
+
     border: 1px solid #293d4e;
+
     border-radius: 10px;
+
     overflow: hidden;
+
     box-shadow: 0 20px 60px #0008;
 }
 
-/* HEADER */
+
+/* =========================================
+   HEADER
+========================================= */
 
 header {
+
     height: 72px;
+
     display: flex;
+
     align-items: center;
+
     gap: 14px;
+
     padding: 12px 18px;
-    background: linear-gradient(180deg, #192530, #121b24);
+
+    background:
+        linear-gradient(
+            180deg,
+            #192530,
+            #121b24
+        );
+
     border-bottom: 1px solid #293d4e;
 }
 
+
 .logo {
+
     width: 38px;
     height: 38px;
+
     border: 1px solid #a66b20;
+
     border-radius: 8px;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     color: #f2a23d;
+
     font-size: 12px;
+
     font-weight: bold;
 }
 
+
 .heading h1 {
+
     margin: 0;
+
     font-size: 16px;
 }
 
+
 .heading small {
+
     display: block;
+
     margin-top: 5px;
+
     color: #71869a;
+
     font-size: 10px;
+
     letter-spacing: 1px;
+
     text-transform: uppercase;
 }
+
 
 .header-info {
+
     margin-left: auto;
+
     display: flex;
+
     gap: 25px;
+
     font-size: 9px;
+
     color: #71869a;
+
     text-transform: uppercase;
+
     letter-spacing: 1px;
 }
 
+
 .header-info b {
+
     display: block;
+
     margin-top: 3px;
+
     font-size: 18px;
+
     color: #e8752b;
 }
 
+
 .header-info .blue b {
+
     color: #3f8cff;
 }
 
+
 .close {
+
     width: 36px;
     height: 36px;
+
     border: 1px solid #30485b;
+
     border-radius: 8px;
+
     background: #1b2732;
+
     color: #aab9c6;
+
     font-size: 18px;
 }
 
-/* MAIN */
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
 
 .content {
+
     display: grid;
+
     grid-template-columns: 1fr 300px;
+
     min-height: calc(100vh - 112px);
 }
 
+
 .main {
+
     padding: 16px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 }
 
+
+/* =========================================
+   MAIN IMAGE
+========================================= */
+
 .main-image {
+
     width: 100%;
+
     height: 650px;
+
     max-height: calc(100vh - 145px);
+
     min-height: 450px;
 
     border: 1px solid #314657;
+
     border-radius: 8px;
 
     background:
@@ -133,69 +229,86 @@ header {
             #172530
         );
 
+    background-size: cover;
+
+    background-position: center;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     overflow: hidden;
+
     position: relative;
 }
 
-/*
-==================================================
-MAIN IMAGE
-==================================================
-
-Replace the URL below with your image.
-
-Example:
-
-background-image: url("https://example.com/image.jpg");
-
-*/
-
-.main-image {
-    background-image: url("");
-    background-size: cover;
-    background-position: center;
-}
 
 .main-image::after {
+
     content: "MAIN IMAGE";
+
     color: #566b7c;
+
     font-size: 12px;
+
     letter-spacing: 3px;
+
     border: 1px dashed #344b5d;
+
     padding: 20px 30px;
+
     border-radius: 6px;
 }
 
-/* SIDE PANEL */
+
+/* =========================================
+   SIDE PANEL
+========================================= */
 
 .side {
+
     border-left: 1px solid #293d4e;
+
     background: #0e161f;
 }
 
+
 .side-title {
+
     height: 48px;
+
     padding: 16px 14px;
+
     border-bottom: 1px solid #1d2c39;
+
     color: #71869a;
+
     font-size: 11px;
+
     letter-spacing: 1.4px;
+
     text-transform: uppercase;
 }
 
+
 .slots {
+
     padding: 10px;
+
     display: flex;
+
     flex-direction: column;
+
     gap: 8px;
 }
 
+
 .slot {
+
     width: 100%;
+
     min-height: 78px;
 
     text-align: left;
@@ -203,13 +316,15 @@ background-image: url("https://example.com/image.jpg");
     padding: 13px;
 
     border: 1px solid #1d2b38;
+
     border-radius: 7px;
 
-    background: linear-gradient(
-        180deg,
-        #141e28,
-        #111922
-    );
+    background:
+        linear-gradient(
+            180deg,
+            #141e28,
+            #111922
+        );
 
     color: #d8e0e8;
 
@@ -218,43 +333,69 @@ background-image: url("https://example.com/image.jpg");
     transition: 0.15s;
 }
 
+
 .slot:hover {
+
     border-color: #3c5a70;
+
     background: #17232e;
+
     transform: translateX(-2px);
 }
 
+
 .slot-title {
+
     font-size: 13px;
+
     font-weight: bold;
 }
 
+
 .slot-description {
+
     margin-top: 7px;
+
     color: #73899b;
+
     font-size: 10px;
 }
 
+
 .slot-tag {
+
     float: right;
+
     color: #e8752b;
+
     border: 1px solid #9a4e21;
+
     border-radius: 10px;
+
     padding: 3px 7px;
+
     font-size: 8px;
 }
 
-/* PROFILE WINDOW */
+
+/* =========================================
+   PROFILE POPUP
+========================================= */
 
 .overlay {
+
     position: fixed;
+
     inset: 0;
 
     background: #030609cc;
+
     backdrop-filter: blur(5px);
 
     display: none;
+
     align-items: center;
+
     justify-content: center;
 
     padding: 20px;
@@ -262,89 +403,146 @@ background-image: url("https://example.com/image.jpg");
     z-index: 100;
 }
 
+
 .overlay.active {
+
     display: flex;
 }
 
+
 .profile {
-    width: 560px;
+
+    width: 650px;
+
     max-width: 100%;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
 
     background: #101923;
 
     border: 1px solid #304555;
+
     border-radius: 10px;
 
     box-shadow: 0 25px 90px #000b;
 
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-/* PROFILE HEADER */
+
+/* =========================================
+   PROFILE HEADER
+========================================= */
 
 .profile-header {
+
     display: flex;
+
     align-items: center;
 
     padding: 16px 18px;
 
-    background: linear-gradient(
-        180deg,
-        #18242e,
-        #121c25
-    );
+    background:
+        linear-gradient(
+            180deg,
+            #18242e,
+            #121c25
+        );
 
     border-bottom: 1px solid #233441;
 }
 
+
 .profile-header h2 {
+
     margin: 0;
+
     font-size: 18px;
 }
 
+
 .profile-close {
+
     margin-left: auto;
 
     width: 32px;
     height: 32px;
 
     border: 1px solid #304352;
+
     border-radius: 7px;
 
     background: #1a2731;
+
     color: #a9b8c5;
 
     cursor: pointer;
 }
 
-/* PROFILE BODY */
+
+/* =========================================
+   PROFILE CONTENT
+========================================= */
 
 .profile-body {
+
     padding: 18px;
 }
 
+
+/* TOP SECTION
+   PHOTO LEFT
+   NAME + SHORT TEXT RIGHT
+========================================= */
+
+.profile-top {
+
+    display: flex;
+
+    gap: 18px;
+
+    align-items: flex-start;
+}
+
+
+/* SMALL PHOTO */
+
 .profile-image {
-    width: 100%;
-    height: 190px;
+
+    width: 150px;
+
+    height: 150px;
+
+    flex-shrink: 0;
 
     border: 1px solid #2d4353;
+
     border-radius: 7px;
 
     background: #0c141b;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     overflow: hidden;
 
     color: #536879;
-    font-size: 10px;
-    letter-spacing: 2px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
 }
 
+
 .profile-image img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -352,57 +550,144 @@ background-image: url("https://example.com/image.jpg");
     display: none;
 }
 
-.profile-text {
-    margin-top: 16px;
 
-    padding: 14px;
+/* RIGHT SIDE */
+
+.profile-info {
+
+    flex: 1;
+}
+
+
+.profile-name {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #e0e6ec;
+
+    margin-bottom: 12px;
+}
+
+
+/* SMALL PARAGRAPH */
+
+.short-text {
+
+    padding: 11px;
+
+    background: #0c141c;
+
+    border-left: 2px solid #3f8cff;
+
+    color: #aebbc6;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    min-height: 70px;
+}
+
+
+/* =========================================
+   LARGE PARAGRAPH
+========================================= */
+
+.long-text {
+
+    margin-top: 18px;
+
+    padding: 15px;
+
+    min-height: 190px;
+
+    background: #0c141c;
+
+    border: 1px solid #253846;
 
     border-left: 2px solid #e8752b;
 
-    background: #0c141c;
+    border-radius: 5px;
 
     color: #aebbc6;
 
     font-size: 13px;
+
     line-height: 1.7;
+
+    white-space: pre-line;
 }
 
-/* MOBILE */
+
+/* =========================================
+   MOBILE
+========================================= */
 
 @media(max-width: 800px) {
 
     body {
+
         padding: 0;
     }
 
     .app {
+
         min-height: 100vh;
+
         border-radius: 0;
     }
 
     .content {
+
         grid-template-columns: 1fr;
     }
 
     .side {
+
         border-left: 0;
+
         border-top: 1px solid #293d4e;
     }
 
     .main-image {
+
         height: 55vh;
+
         min-height: 350px;
     }
 }
+
+
+@media(max-width: 500px) {
+
+    .profile-top {
+
+        flex-direction: column;
+    }
+
+    .profile-image {
+
+        width: 130px;
+
+        height: 130px;
+    }
+}
+
 </style>
 </head>
 
 
 <body>
 
+
 <div class="app">
 
-    <!-- HEADER -->
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
 
     <header>
 
@@ -410,10 +695,11 @@ background-image: url("https://example.com/image.jpg");
             MRC
         </div>
 
+
         <div class="heading">
 
             <h1>
-                Facility Tracker.
+                Facility Tracker
             </h1>
 
             <small>
@@ -421,6 +707,7 @@ background-image: url("https://example.com/image.jpg");
             </small>
 
         </div>
+
 
         <div class="header-info">
 
@@ -436,19 +723,26 @@ background-image: url("https://example.com/image.jpg");
 
         </div>
 
-        <button class="close" onclick="location.reload()">
+
+        <button class="close"
+                onclick="location.reload()">
+
             ×
+
         </button>
 
     </header>
 
 
-    <!-- MAIN CONTENT -->
+
+    <!-- =====================================
+         CONTENT
+    ====================================== -->
 
     <div class="content">
 
 
-        <!-- BIG IMAGE -->
+        <!-- MAIN IMAGE -->
 
         <main class="main">
 
@@ -456,6 +750,7 @@ background-image: url("https://example.com/image.jpg");
             </div>
 
         </main>
+
 
 
         <!-- SIDE PANEL -->
@@ -472,7 +767,10 @@ background-image: url("https://example.com/image.jpg");
 
                 <!-- SLOT ONE -->
 
-                <button class="slot" onclick="openProfile(1)">
+                <button
+                    class="slot"
+                    onclick="openProfile(1)"
+                >
 
                     <span class="slot-tag">
                         OPEN
@@ -489,9 +787,13 @@ background-image: url("https://example.com/image.jpg");
                 </button>
 
 
+
                 <!-- SLOT TWO -->
 
-                <button class="slot" onclick="openProfile(2)">
+                <button
+                    class="slot"
+                    onclick="openProfile(2)"
+                >
 
                     <span class="slot-tag">
                         OPEN
@@ -518,12 +820,20 @@ background-image: url("https://example.com/image.jpg");
 
 
 
-<!-- PROFILE POPUP -->
+<!-- =========================================
+     PROFILE POPUP
+========================================= -->
 
-<div class="overlay" id="profileOverlay">
+<div
+    class="overlay"
+    id="profileOverlay"
+>
+
 
     <div class="profile">
 
+
+        <!-- PROFILE HEADER -->
 
         <div class="profile-header">
 
@@ -541,29 +851,71 @@ background-image: url("https://example.com/image.jpg");
         </div>
 
 
+
         <div class="profile-body">
 
 
-            <div class="profile-image">
+            <!-- =================================
+                 TOP PROFILE AREA
+            ================================== -->
 
-                <span id="imagePlaceholder">
-                    PROFILE IMAGE
-                </span>
+            <div class="profile-top">
 
-                <img
-                    id="profileImage"
-                    src=""
-                    alt=""
-                >
+
+                <!-- PHOTO -->
+
+                <div class="profile-image">
+
+                    <span id="imagePlaceholder">
+                        PROFILE IMAGE
+                    </span>
+
+                    <img
+                        id="profileImage"
+                        src=""
+                        alt=""
+                    >
+
+                </div>
+
+
+
+                <!-- NAME + SMALL PARAGRAPH -->
+
+                <div class="profile-info">
+
+
+                    <div
+                        class="profile-name"
+                        id="profileName"
+                    >
+                        Name
+                    </div>
+
+
+                    <div
+                        class="short-text"
+                        id="profileShort"
+                    >
+                        Short information goes here.
+                    </div>
+
+
+                </div>
 
             </div>
 
 
+
+            <!-- =================================
+                 LARGE INFORMATION AREA
+            ================================== -->
+
             <div
-                class="profile-text"
-                id="profileText"
+                class="long-text"
+                id="profileLong"
             >
-                Profile information goes here.
+                Longer information goes here.
             </div>
 
 
@@ -577,27 +929,33 @@ background-image: url("https://example.com/image.jpg");
 
 <script>
 
-/*
+
+/* ==================================================
+   EDIT YOUR PROFILES HERE
 ==================================================
-EDIT YOUR PROFILES HERE
-==================================================
 
-title = title shown at the top
+   Each profile has:
 
-image = image URL
+   title
+   image
+   short
+   long
 
-text = paragraph underneath the image
+   "title" = popup title
 
-You can use a direct image URL such as:
+   "image" = profile picture URL
 
-https://example.com/image.jpg
+   "short" = small paragraph beside picture
 
-Leave image as "" for an empty image box.
+   "long" = larger paragraph underneath
 
-==================================================
-*/
+   You can use multiple lines in "long".
+
+================================================== */
+
 
 const profiles = {
+
 
     1: {
 
@@ -605,8 +963,17 @@ const profiles = {
 
         image: "",
 
-        text:
-            "This is the first profile. Replace this paragraph with whatever information you want displayed here."
+        short:
+            "Short information about this person goes here.",
+
+        long:
+`This is the larger information section.
+
+You can write several lines here.
+
+You can add as much information as you want.
+
+This section is designed for longer descriptions, records, notes, background information, or whatever you want to put here.`
 
     },
 
@@ -617,8 +984,17 @@ const profiles = {
 
         image: "",
 
-        text:
-            "This is the second profile. Replace this paragraph with whatever information you want displayed here."
+        short:
+            "Short information about this person goes here.",
+
+        long:
+`This is the larger information section for Profile Two.
+
+You can use multiple paragraphs.
+
+Each line will stay separated because the website uses white-space formatting.
+
+Add as much information as needed here.`
 
     }
 
@@ -626,28 +1002,39 @@ const profiles = {
 
 
 
-/*
-==================================================
-DO NOT NEED TO EDIT BELOW THIS
-==================================================
-*/
+/* ==================================================
+   OPEN PROFILE
+================================================== */
 
 function openProfile(number) {
 
     const profile = profiles[number];
 
+
     document.getElementById("profileTitle").textContent =
         profile.title;
 
-    document.getElementById("profileText").textContent =
-        profile.text;
+
+    document.getElementById("profileName").textContent =
+        profile.title;
+
+
+    document.getElementById("profileShort").textContent =
+        profile.short;
+
+
+    document.getElementById("profileLong").textContent =
+        profile.long;
+
 
 
     const image =
         document.getElementById("profileImage");
 
+
     const placeholder =
         document.getElementById("imagePlaceholder");
+
 
 
     if (profile.image !== "") {
@@ -658,7 +1045,9 @@ function openProfile(number) {
 
         placeholder.style.display = "none";
 
-    } else {
+    }
+
+    else {
 
         image.src = "";
 
@@ -669,12 +1058,19 @@ function openProfile(number) {
     }
 
 
+
     document
         .getElementById("profileOverlay")
         .classList
         .add("active");
+
 }
 
+
+
+/* ==================================================
+   CLOSE PROFILE
+================================================== */
 
 function closeProfile() {
 
@@ -686,32 +1082,40 @@ function closeProfile() {
 }
 
 
-/* Close when clicking outside the profile */
+
+/* CLOSE WHEN CLICKING OUTSIDE */
 
 document
     .getElementById("profileOverlay")
-    .addEventListener("click", function(event) {
+    .addEventListener(
+        "click",
+        function(event) {
 
-        if (event.target === this) {
+            if (event.target === this) {
+
+                closeProfile();
+
+            }
+
+        }
+    );
+
+
+
+/* ESCAPE KEY */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
 
             closeProfile();
 
         }
 
-    });
-
-
-/* Close with ESC */
-
-document.addEventListener("keydown", function(event) {
-
-    if (event.key === "Escape") {
-
-        closeProfile();
-
     }
-
-});
+);
 
 </script>
 
